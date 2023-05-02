@@ -19,8 +19,120 @@
 
 
     // -------- Vasco
+    footer {
+        background-color: rgb(32, 29, 72);
+        color: white;
+        a {
+        text-decoration: none;
+        color: rgb(243, 186, 186);
+        }
+        font-family: sans-serif;
+        
+        .footer-container {
+            display:flex;
+            flex-direction: column;
+            padding-top: 1rem;
+        }
+
+        .f-header{
+            padding: 0 1rem;
+            .f-header1 {
+                display:flex;
+                gap:0.5rem;
+                button {
+                    all: unset;
+                    background-color: rgb(24, 21, 45) ;
+                    width: 5rem;
+                    height: 2.5rem;
+                    text-align: center;
+                }
+
+            }
+            .f-header2 {
+                display:flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 0 1rem;
+                font-size: 1rem;
+            }
+        }
+
+        .f-form {
+            padding: 0 1rem;
+            label {
+                font-size: 0.95rem;
+                font-weight: bold;
+            }
+            form {
+                margin:1rem 0 1rem;
+                display: flex;
+                height: 3rem;
+                input{
+                    width: 87%;
+                    border: 1px solid white;
+
+                }
+                button {
+                    all: unset;
+                    width: 13%;
+                    background-color: rgb(253, 128, 36);
+                    border-radius: 0 0.3rem 0.3rem 0;
+                }
+            }
+        }
+        
+        .f-menu {
+            display:flex;
+            flex-direction: column;
+                       
+
+            button {
+                all: unset;
+                display: flex;
+                justify-content: space-between;
+                height: 3rem;
+                align-items: center;
+                width: 100%;
+                border-top: 1px solid white;
+                padding-left: 1rem;
+                
+                span {
+                    position: relative;
+                    right:2rem;
+
+                    svg {
+                        height: 1rem;
+                        width: 1 rem;
+                    }
+                }
+            }
+            border-bottom: 1px solid white;
+        }
+
+        .hidemenu {
+            display:none;
+            flex-direction: column;
+        }
+        #span {
+            padding: 2rem 1rem;
+        }
 
 
+        .privacy {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 0 4rem 1rem 1rem;
+            font-size: 0.75rem;
+        }
+
+        .f-footer {
+            padding: 1rem 1rem;
+            font-size: 0.75rem;
+        }
+    }
+    
+    
     // -------- Moreno
 
 
