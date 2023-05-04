@@ -1,18 +1,11 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-// -------- Marco
 
 
-// -------- Vasco
-
-
-// -------- Moreno
-
-
-// -------- Andre
 
 @media screen and (max-width: 360px) {
     // -------- Marco
@@ -139,7 +132,7 @@
     // -------- Andre
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (min-width: 361px) {
     // -------- Marco
 
 
@@ -151,3 +144,136 @@
 
     // -------- Andre
 }
+
+@media screen and (min-width: 821px) {
+    // -------- Marco
+    
+    
+    // -------- Vasco
+    
+        .footer-container {
+            background-color: rgb(32, 29, 72);
+            color: white;
+            a {
+            text-decoration: none;
+            color: rgb(243, 186, 186);
+            }
+            font-family: sans-serif;
+            display: grid;
+            justify-content: center;
+            grid-template-areas: 
+            ".       f-header   f-menu     f-menu       f-menu     f-menu      .     " 
+            ".         .        f-menu     f-menu       f-menu     f-menu      .     "
+            ".      f-form        .           .           .        span_       .   "
+            ".      privacy    privacy    privacy         .          .         .   "
+            ".      f-footer   f-footer   f-footer    f-footer   f-footer      .   " 
+            ;
+    
+            .f-header {
+                grid-area: f-header;
+                
+                
+                .f-header1{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.7rem;
+                    img{
+                        width: 5rem;
+                    }
+                    button {
+                        all: unset;
+                        background-color: rgb(24, 21, 45) ;
+                        width: 4rem;
+                        height: 2rem;
+                        text-align: center;
+                    }
+    
+                }
+                .f-header2{
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 2rem;
+                    gap: 1rem;
+                }
+                
+            }
+            .f-menu{
+                grid-area: f-menu;
+                display:flex;
+                gap: 4rem;
+                
+                .dropMenu {
+                    button{
+                        span{
+                            display: none;
+                        }
+                    all: unset;
+                    height: 3rem;
+                    align-items: center;
+                    width: 100%;
+                    }
+    
+                    .hidemenu{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                        width: 12.5rem;
+                    }
+                }
+            }
+           
+            .f-form{
+                grid-area: f-form;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                form{
+                    display:flex;
+                    width: 15rem;
+                    height: 2.5rem;
+                
+                    input{
+                        width: 87%;
+                        border: 1px solid white;
+    
+                    }
+                    button {
+                        all: unset;
+                        width: 13%;
+                        background-color: rgb(253, 128, 36);
+                        border-radius: 0 0.3rem 0.3rem 0;
+                    }
+                }
+            }
+    
+            #span{
+                grid-area: span_;
+            }
+            font-size: 0.7rem;
+            .privacy{
+                grid-area: privacy;
+                display: flex;
+                gap: 3rem;
+                padding-top: 5rem;
+            }
+            .f-footer{
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                grid-area: f-footer;
+                width: 75rem;
+    
+            }
+    
+        }    
+           
+           
+    
+    
+    // -------- Moreno
+    
+    
+    // -------- Andre
+    
+    
+    }
+    
