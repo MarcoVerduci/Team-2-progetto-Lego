@@ -6,6 +6,61 @@
 }
 
 @media screen and (max-width: 360px) {
+    // -------- Marco
+
+
+    // -------- Vasco
+    footer {
+        background-color: rgb(32, 29, 72);
+        color: white;
+        a {
+        text-decoration: none;
+        color: rgb(243, 186, 186);
+        }
+        font-family: sans-serif;
+        
+        .footer-container {
+            display:flex;
+            flex-direction: column;
+            padding-top: 1rem;
+        }
+
+        .f-header{
+            padding: 0 1rem;
+            .f-header1 {
+                display:flex;
+                gap:0.5rem;
+                button {
+                    all: unset;
+                    background-color: rgb(24, 21, 45) ;
+                    width: 5rem;
+                    height: 2.5rem;
+                    text-align: center;
+                }
+
+            }
+            .f-header2 {
+                display:flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 0 1rem;
+                font-size: 1rem;
+            }
+        }
+
+        .f-form {
+            padding: 0 1rem;
+            label {
+                font-size: 0.95rem;
+                font-weight: bold;
+            }
+            form {
+                margin:1rem 0 1rem;
+                display: flex;
+                height: 3rem;
+                input{
+                    width: 87%;
+                    border: 1px solid white;
 
     // -------- Marco
     .header_wrapper {
@@ -128,9 +183,68 @@
 
     }
 
-    // -------- Vasco
+                }
+                button {
+                    all: unset;
+                    width: 13%;
+                    background-color: rgb(253, 128, 36);
+                    border-radius: 0 0.3rem 0.3rem 0;
+                }
+            }
+        }
+        
+        .f-menu {
+            display:flex;
+            flex-direction: column;
+                       
+
+            button {
+                all: unset;
+                display: flex;
+                justify-content: space-between;
+                height: 3rem;
+                align-items: center;
+                width: 100%;
+                border-top: 1px solid white;
+                padding-left: 1rem;
+                
+                span {
+                    position: relative;
+                    right:2rem;
+
+                    svg {
+                        height: 1rem;
+                        width: 1 rem;
+                    }
+                }
+            }
+            border-bottom: 1px solid white;
+        }
+
+        .hidemenu {
+            display:none;
+            flex-direction: column;
+        }
+        #span {
+            padding: 2rem 1rem;
+        }
 
 
+        .privacy {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 0 4rem 1rem 1rem;
+            font-size: 0.75rem;
+        }
+
+        .f-footer {
+            padding: 1rem 1rem;
+            font-size: 0.75rem;
+        }
+    }
+    
+    
     // -------- Moreno
 
 
@@ -167,6 +281,141 @@
             font-weight: 400;
         }
 
+    // -------- Andre
+}
+
+@media screen and (min-width: 821px) {
+    // -------- Marco
+    
+    
+    // -------- Vasco
+    
+        .footer-container {
+            background-color: rgb(32, 29, 72);
+            color: white;
+            a {
+            text-decoration: none;
+            color: rgb(243, 186, 186);
+            }
+            font-family: sans-serif;
+            display: grid;
+            justify-content: center;
+            grid-template-areas: 
+            ".       f-header   f-menu     f-menu       f-menu     f-menu      .     " 
+            ".         .        f-menu     f-menu       f-menu     f-menu      .     "
+            ".      f-form        .           .           .        span_       .   "
+            ".      privacy    privacy    privacy         .          .         .   "
+            ".      f-footer   f-footer   f-footer    f-footer   f-footer      .   " 
+            ;
+    
+            .f-header {
+                grid-area: f-header;
+                
+                
+                .f-header1{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.7rem;
+                    img{
+                        width: 5rem;
+                    }
+                    button {
+                        all: unset;
+                        background-color: rgb(24, 21, 45) ;
+                        width: 4rem;
+                        height: 2rem;
+                        text-align: center;
+                    }
+    
+                }
+                .f-header2{
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 2rem;
+                    gap: 1rem;
+                }
+                
+            }
+            .f-menu{
+                grid-area: f-menu;
+                display:flex;
+                gap: 4rem;
+                
+                .dropMenu {
+                    button{
+                        span{
+                            display: none;
+                        }
+                    all: unset;
+                    height: 3rem;
+                    align-items: center;
+                    width: 100%;
+                    }
+    
+                    .hidemenu{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                        width: 12.5rem;
+                    }
+                }
+            }
+           
+            .f-form{
+                grid-area: f-form;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                form{
+                    display:flex;
+                    width: 15rem;
+                    height: 2.5rem;
+                
+                    input{
+                        width: 87%;
+                        border: 1px solid white;
+    
+                    }
+                    button {
+                        all: unset;
+                        width: 13%;
+                        background-color: rgb(253, 128, 36);
+                        border-radius: 0 0.3rem 0.3rem 0;
+                    }
+                }
+            }
+    
+            #span{
+                grid-area: span_;
+            }
+            font-size: 0.7rem;
+            .privacy{
+                grid-area: privacy;
+                display: flex;
+                gap: 3rem;
+                padding-top: 5rem;
+            }
+            .f-footer{
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                grid-area: f-footer;
+                width: 75rem;
+    
+            }
+    
+        }    
+           
+           
+    
+    
+    // -------- Moreno
+    
+    
+    // -------- Andre
+    
+    
+    }
+    
         & p {
             font-size: 0.85rem;
             line-height: 1.2rem;
