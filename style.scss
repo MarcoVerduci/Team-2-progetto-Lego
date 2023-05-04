@@ -1,11 +1,9 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Cera Pro, sans-serif;
 }
-
-
 
 @media screen and (max-width: 360px) {
     // -------- Marco
@@ -63,6 +61,127 @@
                 input{
                     width: 87%;
                     border: 1px solid white;
+
+    // -------- Marco
+    .header_wrapper {
+        max-width: 100rem;
+        position: relative;
+    }
+
+    .header_img {
+        width: 100%;
+        height: 22.5rem;
+    }
+
+    .big_img {
+        width: 100%;
+        height: 100%;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .header_info {
+        background-color: black;
+        color: white;
+        height: 12.6rem;
+        padding: 1.25rem 1.875rem;
+        & .sw_logo {
+            & img {
+            position: absolute;
+            top: 52%;
+            right: 4%;
+            height: 50px;
+            width: 117px;
+            }
+        }
+        & .header_title {
+            text-align: center;
+            & h2 {
+                font-size: 1rem;
+                line-height: 1.75rem;
+            }
+            & p {
+                display: block;
+                font-size: 1rem;
+                line-height: 1.1875rem;
+                margin-top: 0.625rem;
+            }
+        }
+    }
+
+    .header_buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        & a {
+            height: 2.5rem;
+            display: flex;
+            background-color: white;
+            font-size: 0.875rem;
+            line-height: 1.1875rem;
+            margin-top: 0.9375rem;
+            margin-left: 0.625rem;
+            margin-right: 0.625rem;
+            font-weight: 500;
+            padding: 0.625rem 1.25rem;
+            text-decoration: none;
+            color: black;
+            border: 1px solid transparent;
+            border-collapse: collapse;
+            border-radius: 4px;
+
+            & img {
+                margin-left: 0.75rem;
+                line-height: 0;
+                height: 28px;
+                width: 18px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    .header_links {
+        padding: 1.25rem;
+
+        & ul {
+            display: flex;
+            margin: 0px auto;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            line-height: 0.9rem;
+
+            & li {
+                display: flex;
+                margin: 0px 0px 0.625rem;
+                max-width: 6.25rem;
+                flex-direction: column;
+                text-align: center;
+                flex: 0 1 25%;
+
+                & a {
+                    text-decoration: none;
+                    color: black;
+
+                    & div {
+                        max-width: 3.75rem;
+                        margin: 0px auto 0.75rem;
+                        display: block;
+                    }
+
+                    & p {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+
+    }
 
                 }
                 button {
@@ -133,14 +252,34 @@
 }
 
 @media screen and (min-width: 361px) {
+
     // -------- Marco
 
+    .big_img {
+        width: 100%;
+        height: 100%;
 
-    // -------- Vasco
+        & img {
 
+            width: 100%;
+            height: 100%;
+        }
+    }
 
-    // -------- Moreno
+    .header_info {
+        position: absolute;
+        top: 2%;
+        left: 5%;
+        max-width: 50%;
+        color: white;
+        padding: 1.25rem 1.875rem;
+        height: 16.2rem;
 
+        & h2 {
+            font-size: 1.2rem;
+            line-height: 1.93rem;
+            font-weight: 400;
+        }
 
     // -------- Andre
 }
@@ -277,3 +416,104 @@
     
     }
     
+        & p {
+            font-size: 0.85rem;
+            line-height: 1.2rem;
+            margin-top: 0.6rem;
+        }
+    }
+
+    .sw_logo {
+        & img {
+            max-width: 9rem;
+            max-height: 3rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .header_buttons {
+        display: flex;
+        flex-wrap: wrap;
+
+        & a {
+            height: 2.5rem;
+            display: flex;
+            background-color: white;
+            font-size: 0.875rem;
+            line-height: 1.1875rem;
+            margin-top: 0.9375rem;
+            margin-right: 1rem;
+            font-weight: 500;
+            padding: 0.625rem 1.25rem;
+            text-decoration: none;
+            color: black;
+            border: 1px solid transparent;
+            border-collapse: collapse;
+            border-radius: 4px;
+
+            & span {
+                padding-top: 1px;
+            }
+
+            & img {
+                margin-left: 0.75rem;
+                line-height: 0;
+                height: 28px;
+                width: 18px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    .header_links {
+        padding: 1.875rem 1.25rem;
+
+        & ul {
+            display: flex;
+            margin: 0px auto;
+            justify-content: center;
+            line-height: 0.9rem;
+
+            & li {
+                display: flex;
+                margin-right: 0.9375rem;
+                margin-bottom: 0.625rem;
+                // max-width: 6.25rem;
+                text-align: center;
+
+                & a {
+                    text-decoration: none;
+                    color: black;
+
+                    & div {
+                        margin: 0px auto 0.75rem;
+                    }
+
+                    & p {
+                        font-size: 0.65rem;
+                    }
+                }
+            }
+        }
+
+    }
+}
+// -------- Vasco
+
+
+// -------- Moreno
+
+
+// -------- Andre
+
+@media screen and (min-width: 821px) {
+// -------- Marco
+
+// -------- Vasco
+
+
+// -------- Moreno
+
+
+// -------- Andre
+}
