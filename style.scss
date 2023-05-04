@@ -261,191 +261,191 @@
             font-size: 0.75rem;
         }
     }
-}
 
-// -------- Moreno
+    // -------- Moreno
 
-.area-giochi2 {
-    display: none;
-}
+    .area-giochi2 {
+        display: none;
+    }
 
-.carosello-heder {
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%;
-    padding: 0;
-}
+    .carosello-heder {
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        padding: 0;
+    }
 
-.container-carosello {
-    display: flex;
-    width: 70rem;
-}
+    .container-carosello {
+        display: flex;
+        width: 70rem;
+    }
 
-.button-left {
-    background-color: white;
-    border: white;
-    display: block;
-    flex: 0 0 auto;
-    transform: rotate(180deg);
-    margin: 0;
-    padding: 0.75rem
-}
+    .button-left {
+        background-color: white;
+        border: white;
+        display: block;
+        flex: 0 0 auto;
+        transform: rotate(180deg);
+        margin: 0;
+        padding: 0.75rem
+    }
 
-.button-right {
-    background-color: white;
-    border: white;
-    margin: 0;
-    padding: 0.75rem
-}
+    .button-right {
+        background-color: white;
+        border: white;
+        margin: 0;
+        padding: 0.75rem
+    }
 
-.logo-right-header {
-    display: none;
-}
+    .logo-right-header {
+        display: none;
+    }
 
-.global-bannerstyle {
-    display: flex;
+    .global-bannerstyle {
+        display: flex;
 
-    align-items: center;
-    justify-content: center;
-    font-size: 0.7rem;
-    font-family: Cera Pro, sans-serif;
-    // width: 12rem;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-family: Cera Pro, sans-serif;
+        // width: 12rem;
 
-}
-
-
-.bannerstyle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-left: 10%;
-}
-
-.header-mobilestyles {
-    background-color: white;
-    border: white;
-}
-
-.logo-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    height: 10%;
-    padding-top: 2%;
-    background-color: white;
-}
-
-.barra-gialla {
-    display: none;
-}
+    }
 
 
+    .bannerstyle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10%;
+    }
 
-.logo-right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 15%;
-    width: 35%;
+    .header-mobilestyles {
+        background-color: white;
+        border: white;
+    }
 
+    .logo-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-}
+        height: 10%;
+        padding-top: 2%;
+        background-color: white;
+    }
 
-.logo-left {
-    display: flex;
-    padding-left: 2%;
-    gap: 2%;
-    height: 15%;
-    width: 25%;
-
-}
-
-.header-login {
-    display: none;
-
-}
-
-.vip {
-    display: none;
-}
-
-.barra {
-    display: none;
-}
-
-.BurgerMenu {
-    height: 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.button-logo-menu {
-    background-color: white;
-    border: white;
-}
-
-.logo-menu {
-    background-color: white;
-    border: white;
-    width: 40%;
-    height: 50%;
-}
-
-.BurgerMenuButtonstyles {
-    background-color: white;
-    border: white;
-}
-
-.lego-logo {
-    width: 100%;
-    height: 100%;
-}
+    .barra-gialla {
+        display: none;
+    }
 
 
-.Search {
-    background-color: white;
-    border: white;
 
-}
-
-.header-account {
-    display: contents;
-    background-color: white;
-    border: white;
+    .logo-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 15%;
+        width: 35%;
 
 
-}
+    }
 
-.header-carrello {
-    padding: 2px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 2%;
+    .logo-left {
+        display: flex;
+        padding-left: 2%;
+        gap: 2%;
+        height: 15%;
+        width: 25%;
 
-}
+    }
 
-.carrello {
-    padding-top: 0.8rem;
-    color: black;
-}
+    .header-login {
+        display: none;
 
-.zero {
-    display: flex;
-    justify-content: center;
-}
+    }
 
-.zero1 {
-    display: none;
-}
+    .vip {
+        display: none;
+    }
 
-.cuore {
-    display: flex;
-    align-items: center;
+    .barra {
+        display: none;
+    }
 
+    .BurgerMenu {
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-logo-menu {
+        background-color: white;
+        border: white;
+    }
+
+    .logo-menu {
+        background-color: white;
+        border: white;
+        width: 40%;
+        height: 50%;
+    }
+
+    .BurgerMenuButtonstyles {
+        background-color: white;
+        border: white;
+    }
+
+    .lego-logo {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .Search {
+        background-color: white;
+        border: white;
+
+    }
+
+    .header-account {
+        display: contents;
+        background-color: white;
+        border: white;
+
+
+    }
+
+    .header-carrello {
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2%;
+
+    }
+
+    .carrello {
+        padding-top: 0.8rem;
+        color: black;
+    }
+
+    .zero {
+        display: flex;
+        justify-content: center;
+    }
+
+    .zero1 {
+        display: none;
+    }
+
+    .cuore {
+        display: flex;
+        align-items: center;
+
+    }
 }
 
 @media screen and (min-width: 361px) {
