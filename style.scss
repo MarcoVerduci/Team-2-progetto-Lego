@@ -3,16 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-// -------- Marco
-
-
-// -------- Vasco
-
-
-// -------- Moreno
-
-
-// -------- Andre
+.container-heder {
+    z-index: 3;
+    position: relative;
+    
+    
+}
 
 @media screen and (max-width: 360px) {
     // -------- Marco
@@ -23,11 +19,196 @@
 
     // -------- Moreno
 
+    .area-giochi2 {
+        display: none;
+    }
+    
+    .carosello-heder {
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .container-carosello {
+        display: flex;
+        width:70rem;
+    }
+
+    .button-left {
+        background-color: white;
+        border: white;
+        display: block;
+        flex: 0 0 auto;
+        transform: rotate(180deg);
+        margin: 0;
+        padding: 0.75rem
+       
+    }
+
+    .button-right {
+        background-color: white;
+        border: white;
+        margin: 0;
+        padding: 0.75rem
+        
+    }
+
+    .logo-right-header {
+        display: none;
+    }
+
+    .global-bannerstyle {
+        display: flex;
+       
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-family: Cera Pro,sans-serif;
+        // width: 12rem;
+        
+    }
+
+
+    .bannerstyle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10%;
+    }
+
+    .header-mobilestyles {
+        background-color: white;
+        border: white;
+    }
+
+    .logo-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+        height: 10%;
+        padding-top: 2%;
+        background-color: white;
+    }
+
+    .barra-gialla {
+        display: none;
+    }
+
+
+
+    .logo-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 15%;
+        width: 35%;
+       
+        
+    }
+
+    .logo-left {
+        display: flex;
+        padding-left: 2%;
+        gap: 2%;
+        height: 15%;
+        width: 25%;
+       
+    }
+
+    .header-login {
+        display: none; 
+         
+    }
+    
+    .vip {
+        display: none;  
+    }
+    
+    .barra {
+        display: none;  
+    }
+
+    .BurgerMenu {
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-logo-menu {
+        background-color: white;
+        border: white;
+    }
+
+    .logo-menu {
+          background-color: white;
+        border: white;
+        width: 40%;
+        height: 50%;
+    }
+
+    .BurgerMenuButtonstyles {
+        background-color: white;
+        border: white; 
+    }
+
+    .lego-logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    
+    .Search {
+        background-color: white;
+        border: white;
+       
+    }
+
+    .header-account {
+        display: contents;
+        background-color: white;
+        border: white;
+        
+        
+    }
+
+    .header-carrello {
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2%;
+        
+    }
+
+    .carrello {
+        padding-top: 0.8rem;
+        color: black;
+    }
+
+    .zero {
+        display: flex;
+        justify-content: center;
+    }
+
+    .zero1 {
+        display: none;
+    }
+
+    .cuore {
+        display: flex;
+        align-items: center;
+        
+    }
+
 
     // -------- Andre
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (min-width: 361px) {
     // -------- Marco
 
 
@@ -36,6 +217,663 @@
 
     // -------- Moreno
 
+    .area-giochi {
+        display: none;
+    }
+
+    .carosello-heder {
+        display: flex;
+        justify-content: end;
+        justify-content: space-between;
+        gap: 10%;
+        max-width: 100%;
+       
+    }
+
+    .container-carosello {
+        display: flex;
+        justify-content: space-between;
+        width: 80rem;
+        
+        
+    }
+
+    .button-left {
+        background-color: white;
+        border: white;
+        
+        transform: rotate(180deg);
+        margin: 0;
+         padding-top: 0.2rem;
+         padding-left: 10%;
+         padding-right: 10%;
+    }
+
+    .button-right {
+        background-color: white;
+        border: white;
+        margin: 0;
+       padding-top: 0.5rem;
+        padding-left: 10%;
+        
+    }
+
+    .header-login {
+        display: none;  
+    }
+
+    .vip {
+        display: none;  
+    }
+
+    .barra {
+        display: none;  
+    }
+
+    .logo-right-header {
+        display: none;
+    }
+
+    .global-bannerstyle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .header-mobilestyles {
+        background-color: white;
+        border: white;
+       display: contents;
+       display: flex;
+       justify-content: end;
+       padding-left: 2%;
+       padding-right: 2%;
+        
+     
+    }
+
+    .logo-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10%;
+        background-color: white;
+        
+    }
+
+    .barra-gialla {
+        display: none;
+    }
+ 
+    .logo-right {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        height: 15%;
+         width: 30%;
+
+    }
+
+    .logo-left {
+        display: flex;
+        align-items: center;
+        
+        height: 15%;
+        width: 25%;
+    }
+
+    .BurgerMenu {
+        height: 15%;
+       width: 50rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button-logo-menu {
+        background-color: white;
+        border: white;
+         
+    }
+
+    
+    
+
+    .logo-menu {
+          background-color: white;
+        border: white;
+        width: 30%;
+        height: 40%;
+    }
+
+    .BurgerMenuButtonstyles {
+        background-color: white;
+        border: white;
+        
+    }
+
+    .lego-logo2 {
+        padding: 0;
+    }
+
+
+    .lego-logo {
+        width: 60%;
+        height: 100%;
+    }
+
+    .Search {
+        background-color: white;
+        border: white;
+    }
+
+    .header-account {
+        background-color: white;
+        border: white;
+        display: contents;
+    }
+
+    .header-carrello {
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .carrello {
+        color: black;
+    }
+
+    .zero {
+        display: flex;
+        justify-content: center;
+    }
+
+    .zero1 {
+        display: none;
+    }
+
+    .cuore {
+        display: flex;
+        align-items: center;
+    }
+
 
     // -------- Andre
 }
+
+@media screen and (min-width: 821px) {
+    // -------- Marco
+    
+    
+    // -------- Vasco
+    
+    
+    // -------- Moreno
+    
+    .area-giochi {
+        height: 30%;
+        text-decoration: none;
+        display: inline-flex;
+        -webkit-box-align: center;
+        align-items: center;
+        border-radius: 3px;
+        border: none;
+        background: rgb(171, 217, 255);
+        color: rgb(0, 0, 0);
+        font-size: 0.75rem;
+        line-height: 1.5625rem;
+        text-transform: uppercase;
+        padding: 0px 0.625rem;
+        margin-left: 1rem;
+        box-shadow: rgba(48, 85, 181, 0.44) 0px 1px 4px 0px;
+    }
+    
+    .area-giochi:hover {
+     background-color: white;
+    }
+    
+    .freccia {
+        transform: rotate(180deg);
+        width: 20%;
+        padding-left: 10%;
+    }
+    .carosello-heder {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+    
+    .container-carosello {
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+    }
+    
+    .logo-right-header {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 15%;
+    }
+    
+    .button-left {
+        background-color: white;
+        border: white;
+        display: block;
+        flex: 0 0 auto;
+        transform: rotate(180deg);
+        margin-bottom: 0.2rem ;
+        
+        padding-bottom: 0.2rem;
+        
+    }
+    
+    .button-right {
+        background-color: white;
+        border: white;
+        
+        padding-top: 0.3rem;
+        
+        
+    }
+    
+    .global-bannerstyle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-family: Cera Pro,sans-serif;
+        
+    }
+    
+    
+    .bannerstyle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10%;
+    }
+    
+    .header-mobilestyles {
+        display: none;
+    }
+    
+    .header-login {
+        padding: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3%;
+    }
+    .account {
+        background-color: white;
+        border: white;
+    }
+    .header-account1 {
+        background-color: white;
+        border: white;
+    }
+    
+    .vip {
+        padding: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3%;
+    }
+    
+    .img-vip{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    
+    .barra {
+        display: flex;
+        justify-content: center;
+        border-right: 2px black solid;
+        height: 1.2rem;
+        
+    }
+    
+    // serch
+    .logo-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       padding-top:  0.7rem;
+       padding-bottom: 0.5rem;
+        background-color: #FFCF00;
+    }
+    
+    
+    
+    .logo-right {
+        display: flex;
+        justify-content: space-around;
+        height: 15%;
+        width: 15%;
+    }
+    
+    .logo-left {
+       width: 8%;
+        height: 15%;
+       
+        
+    }
+    
+    
+    
+    .BurgerMenu {
+    display: none;
+    }
+    
+    .lego-logo {
+        width: 50%;
+        height: 50%;
+    }
+    
+    .lego-logo2 {
+        padding-left: 7%;
+    }
+    
+    .scrita-barra {
+        background-color: transparent;
+        border: transparent;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    
+    .scrita-barra:hover{
+        text-decoration: underline;
+    }
+    
+    .barra-gialla {
+        display: flex;
+        
+        align-items: center;
+        // padding-right: 50%;
+        gap: 10%;
+        width: 40%;
+        margin-right: 35%;
+        
+    }
+    .giornata-wars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.3rem ;
+        width: 100%;
+        height: 2rem;
+        border: 1px solid white;
+        background: white;
+    
+       
+        
+    }
+    .giornata-wars:hover {
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 0.3rem ;
+            color: white;
+        }
+    
+    .star-wars {
+        color: red;
+        text-decoration: none;
+        :hover {
+            color: white;
+        }
+    }
+    .Search {
+        background-color: white;
+        border: white;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding-top: 3px;
+    }
+    
+    .header-account {
+       display: none;
+    }
+    
+    .header-carrello {
+        padding: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .carrello {
+        color: black;
+    }
+    
+    .zero {
+       display: none;
+    }
+    
+    .zero1 {
+         display: flex;
+        justify-content: center;
+        padding-right: 2%;
+    }
+    
+    .cuore {
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    // -------- Andre
+    }
+
+// @media screen and (max-width: 360px) {
+//     // -------- Marco
+
+
+//     // -------- Vasco
+
+
+//     // -------- Moreno
+
+//     .area-giochi2 {
+//         display: none;
+//     }
+    
+//     .carosello-heder {
+//         display: flex;
+//         justify-content: space-between;
+//         max-width: 100%;
+//         padding: 0;
+//     }
+
+//     .container-carosello {
+//         display: flex;
+//         width:70rem;
+//     }
+
+//     .button-left {
+//         background-color: white;
+//         border: white;
+//         display: block;
+//         flex: 0 0 auto;
+//         transform: rotate(180deg);
+//         margin: 0;
+//         padding: 0.75rem
+       
+//     }
+
+//     .button-right {
+//         background-color: white;
+//         border: white;
+//         margin: 0;
+//         padding: 0.75rem
+        
+//     }
+
+//     .logo-right-header {
+//         display: none;
+//     }
+
+//     .global-bannerstyle {
+//         display: flex;
+       
+//         align-items: center;
+//         justify-content: center;
+//         font-size: 0.7rem;
+//         font-family: Cera Pro,sans-serif;
+//         // width: 12rem;
+        
+//     }
+
+
+//     .bannerstyle {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         padding-left: 10%;
+//     }
+
+//     .header-mobilestyles {
+//         background-color: white;
+//         border: white;
+//     }
+
+//     .logo-header {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+       
+//         height: 10%;
+//         padding-top: 2%;
+//         background-color: white;
+//     }
+
+//     .barra-gialla {
+//         display: none;
+//     }
+
+
+
+//     .logo-right {
+//         display: flex;
+//         justify-content: space-between;
+        
+       
+//         height: 15%;
+//         width: 35%;
+       
+        
+//     }
+
+//     .logo-left {
+//         display: flex;
+//         padding-left: 2%;
+//         gap: 2%;
+//         height: 15%;
+//         width: 25%;
+       
+//     }
+
+//     .header-login {
+//         display: none; 
+         
+//     }
+    
+//     .vip {
+//         display: none;  
+//     }
+    
+//     .barra {
+//         display: none;  
+//     }
+
+//     .BurgerMenu {
+//         height: 15%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .button-logo-menu {
+//         background-color: white;
+//         border: white;
+//     }
+
+//     .logo-menu {
+//           background-color: white;
+//         border: white;
+//         width: 40%;
+//         height: 50%;
+//     }
+
+//     .BurgerMenuButtonstyles {
+//         background-color: white;
+//         border: white; 
+//     }
+
+//     .lego-logo {
+//         width: 100%;
+//         height: 100%;
+//     }
+
+    
+//     .Search {
+//         background-color: white;
+//         border: white;
+       
+//     }
+
+//     .header-account {
+//         display: contents;
+//         background-color: white;
+//         border: white;
+        
+        
+//     }
+
+//     .header-carrello {
+//         padding: 2px;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         padding-top: 2%;
+        
+//     }
+
+//     .carrello {
+//         padding-top: 0.8rem;
+//         color: black;
+//     }
+
+//     .zero {
+//         display: flex;
+//         justify-content: center;
+//     }
+
+//     .zero1 {
+//         display: none;
+//     }
+
+//     .cuore {
+//         display: flex;
+//         align-items: center;
+        
+//     }
+
+
+//     // -------- Andre
+// }
