@@ -1958,6 +1958,68 @@
 }
 
 @media screen and (min-width: 821px) {
+    // -------- Andre
+
+    #leggi_tutto {
+        display: flex;
+        gap: 1rem;
+        padding: 5rem;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .container_cards {
+                display: flex;
+                justify-content: space-between;
+                
+                a {
+                    display:flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    text-decoration: none;
+                    color:black;
+                    width: 30%;
+    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+    
+                    h4 {
+                        text-align: center;
+                    }
+    
+                    p {
+                        text-align: center;
+                    }
+    
+                    span {
+                        font-weight: bold;
+                        text-align: center;
+    
+                        svg{
+                            height:40%;
+                        }
+                    }     
+                    
+                    &:hover {
+                        span {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .container_card {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }                
+            }
+        }
+    }
+
 
     // -------- Marco
     .header_wrapper {
