@@ -1,35 +1,1171 @@
-// script scritte in alto
+// script scritte in alto per telefono
+let btnTopLeftPhone = document.querySelector(".top_nav_left_btn");
+let btnTopRightPhone = document.querySelector(".top_nav_right_btn");
+let firstTextPhone = document.querySelector(".top_nav_center_el_first_text");
+let secondTextPhone = document.querySelector(".top_nav_center_el_second_text");
+let thirdTextPhone = document.querySelector(".top_nav_center_el_third_text");
+
+let translateValuesPhone = ['0%', '-100%', '-200%'];
+let currentIndexPhone = 0;
+
+btnTopLeftPhone.addEventListener("click", function () {
+    if (window.innerWidth <= 360) {
+        currentIndexPhone--;
+        if (currentIndexPhone < 0) {
+            currentIndexPhone = translateValuesPhone.length - 1;
+        }
+
+        updateTransformPhone();
+    }
+});
+
+btnTopRightPhone.addEventListener("click", function () {
+    if (window.innerWidth <= 360) {
+        currentIndexPhone++;
+        if (currentIndexPhone >= translateValuesPhone.length) {
+            currentIndexPhone = 0;
+        }
+
+        updateTransformPhone();
+    }
+});
+
+function updateTransformPhone() {
+    firstTextPhone.style.transform = `translateX(${translateValuesPhone[currentIndexPhone]})`;
+    secondTextPhone.style.transform = `translateX(${translateValuesPhone[currentIndexPhone]})`;
+    thirdTextPhone.style.transform = `translateX(${translateValuesPhone[currentIndexPhone]})`;
+}
+
+
+// bottone per chiudere la sezione in alto per telefono
+
+let topNavCloserBtnPhone = document.querySelector(".top_nav_closer_btn");
+let topNavPhone = document.querySelector(".top_nav_wrapper");
+let hiddenCloserBtnPhone = document.querySelector(".hidden_closer_btn_tab");
+let headerInfoPhone = document.querySelector(".header_info");
+
+let topNavCloserBtnPhoneActive = false;
+
+topNavCloserBtnPhone.addEventListener("click", function () {
+    if (window.innerWidth <= 360) {
+        if (!topNavCloserBtnPhoneActive) {
+            topNavPhone.style.display = 'none';
+            hiddenCloserBtnPhone.style.top = '1px';
+            headerInfoPhone.style.top = '6.5%';
+        }
+    }
+});
+
+
+// script search bar telefono
+
+let bottomNavSearchBtnPhone = document.querySelector(".bottom_nav_search_btn");
+let hiddenSearchBarPhone = document.querySelector(".hidden_search_bar_wrapper");
+let hiddenSearchBtnPhone = document.querySelector(".hidden_search_bar_search_btn");
+let SearchBarCloserBtnPhone = document.querySelector(".hidden_search_bar_closer_btn");
+
+let bottomNavSearchBtnPhoneActive = false;
+let hiddenSearchBtnPhoneActive = false;
+let SearchBarCloserBtnPhoneActive = false;
+
+bottomNavSearchBtnPhone.addEventListener("click", function () {
+    if (window.innerWidth <= 360) {
+        if (!bottomNavSearchBtnPhoneActive) {
+            bodyElement.style.overflow = 'hidden';
+            hiddenSearchBarPhone.style.display = 'block';
+        }
+    }
+    bottomNavSearchBtnPhoneActive = !bottomNavSearchBtnPhoneActive;
+});
+
+hiddenSearchBtnPhone.addEventListener("click", function () {
+    if (window.innerWidth <= 360) {
+        if (!hiddenSearchBtnPhoneActive) {
+            hiddenSearchBarPhone.style.display = 'none';
+        }
+    }
+    hiddenSearchBtnPhoneActive = !hiddenSearchBtnPhoneActive;
+});
+
+SearchBarCloserBtnPhone.addEventListener("click", function () {
+    if (window.innerWidth <= 360) {
+        if (!SearchBarCloserBtnPhoneActive) {
+            hiddenSearchBarPhone.style.display = 'none';
+        }
+    }
+    SearchBarCloserBtnPhoneActive = !SearchBarCloserBtnPhoneActive;
+});
+
+
+// script per sezione nascosta a sinistra per telefono
+
+let closerBtnPhone = document.querySelector(".hidden_closer_btn_tab");
+let menuBtnPhone = document.querySelector(".menu_btn");
+let closeBtnPhone = document.querySelector(".close_btn");
+let changeCloseBtnPhone = document.querySelector(".change_close_btn");
+let closeBtnDivWrapperPhone = document.querySelector(".close_btn_div_wrapper");
+
+let backgroundShadowPhone = document.querySelector(".background_shadow_tab");
+let hiddenListPhone = document.querySelector(".hidden_list_tab");
+
+let closeBtnPhoneActive = false;
+
+let acquistaButtonPhone = document.querySelector(".acquista_btn_tab");
+let sectionAcquistaPhone = document.querySelector(".hidden_section_acquista");
+let menuSpanFrecciaPhone = document.querySelector(".menu_span_freccia");
+
+let acquistaButtonPhoneActive = false;
+let menuBtnPhoneActiveReturn = false;
+
+let sptAcquistaSectionPhone = document.querySelector(".hidden_section_acquista_spt");
+let sptButtonPhone = document.querySelector(".main_list_hidden_section_acquista_btn");
+let sptPrevSectionBtnPhone = document.querySelector(".hidden_section_acquista_prev_section_btn");
+
+let sptButtonPhoneActive = false;
+let sptPrevSectionBtnPhoneActive = false;
+
+let etaAcquistaSectionPhone = document.querySelector(".hidden_section_acquista_eta");
+let etaButtonPhone = document.querySelector(".main_list_hidden_section_eta_btn");
+let etaPrevSectionBtnPhone = document.querySelector(".hidden_section_acquista_prev_section_eta");
+
+let etaButtonPhoneActive = false;
+let etaPrevSectionBtnPhoneActive = false;
+
+let prezziAcquistaSectionPhone = document.querySelector(".hidden_section_acquista_prezzi");
+let prezziButtonPhone = document.querySelector(".main_list_hidden_section_prezzi_btn");
+let prezziPrevSectionBtnPhone = document.querySelector(".hidden_section_acquista_prev_section_prezzi");
+
+let prezziButtonPhoneActive = false;
+let prezziPrevSectionBtnPhoneActive = false;
+
+let mlAcquistaSectionPhone = document.querySelector(".hidden_section_acquista_ml");
+let mlButtonPhone = document.querySelector(".main_list_hidden_section_ml_btn");
+let mlPrevSectionBtnPhone = document.querySelector(".hidden_section_acquista_prev_section_ml");
+
+let mlButtonPhoneActive = false;
+let mlPrevSectionBtnPhoneActive = false;
+
+let intAcquistaSectionPhone = document.querySelector(".hidden_section_acquista_int");
+let intButtonPhone = document.querySelector(".main_list_hidden_section_int_btn");
+let intPrevSectionBtnPhone = document.querySelector(".hidden_section_acquista_prev_section_int");
+
+let intButtonPhoneActive = false;
+let intPrevSectionBtnPhoneActive = false;
+
+let pabAcquistaSectionPhone = document.querySelector(".hidden_section_acquista_pab");
+let pabButtonPhone = document.querySelector(".main_list_hidden_section_pab_btn");
+let pabPrevSectionBtnPhone = document.querySelector(".hidden_section_acquista_prev_section_pab");
+
+let pabButtonPhoneActive = false;
+let pabPrevSectionBtnPhoneActive = false;
+
+let scopriButtonPhone = document.querySelector(".scopri_btn_tab");
+let sectionScopriPhone = document.querySelector(".hidden_section_scopri");
+
+let scopriButtonPhoneActive = false;
+
+let nvScopriSectionPhone = document.querySelector(".hidden_section_scopri_nv");
+let nvButtonPhone = document.querySelector(".main_list_hidden_section_scopri_btn_nv");
+let nvPrevSectionBtnPhone = document.querySelector(".hidden_section_scopri_prev_section_nv");
+
+let nvButtonPhoneActive = false;
+let nvPrevSectionBtnPhoneActive = false;
+
+let naScopriSectionPhone = document.querySelector(".hidden_section_scopri_na");
+let naButtonPhone = document.querySelector(".main_list_hidden_section_scopri_btn_na");
+let naPrevSectionBtnPhone = document.querySelector(".hidden_section_scopri_prev_section_na");
+
+let naButtonPhoneActive = false;
+let naPrevSectionBtnPhoneActive = false;
+
+let nrScopriSectionPhone = document.querySelector(".hidden_section_scopri_nr");
+let nrButtonPhone = document.querySelector(".main_list_hidden_section_scopri_btn_nr");
+let nrPrevSectionBtnPhone = document.querySelector(".hidden_section_scopri_prev_section_nr");
+
+let nrButtonPhoneActive = false;
+let nrPrevSectionBtnPhoneActive = false;
+
+let aiutoButtonPhone = document.querySelector(".aiuto_btn_tab");
+let sectionAiutoPhone = document.querySelector(".hidden_section_aiuto");
+
+let aiutoButtonPhoneActive = false;
+
+
+closeBtnPhone.addEventListener("click", function () {
+    if (window.innerWidth <= 360) {
+        if (!closeBtnActive) {
+
+            bodyElement.style.overflow = 'hidden';
+
+            backgroundShadowPhone.style.display = 'block';
+            backgroundShadowPhone.style.opacity = '0.5';
+            hiddenListPhone.style.transform = 'translateX(0%) translateY(0px)';
+            hiddenListPhone.style.visibility = 'visible';
+
+            closerBtnPhone.setAttribute('id', 'hidden_closer_btn_tab_active')
+            closerBtnPhone.classList.remove('hidden_closer_btn_tab');
+
+            menuBtnPhone.setAttribute('id', 'menu_btn_active');
+            let menuBtnPhoneActive = document.getElementById("menu_btn_active");
+            menuBtnPhone.classList.remove('menu_btn');
+
+            closeBtnPhone.setAttribute('id', 'close_btn_active');
+            closeBtnPhone.classList.remove('close_btn');
+
+            closeBtnDivWrapperPhone.setAttribute('id', 'close_btn_div_wrapper_active');
+            closeBtnDivWrapperPhone.classList.remove('close_btn_div_wrapper');
+
+            changeCloseBtnPhone.classList.toggle('active');
+
+            sectionAcquistaPhone.removeAttribute('id');
+            sectionAcquistaPhone.classList.add('hidden_section_acquista');
+
+            sectionAcquistaPhone.removeAttribute('id');
+            sectionAcquistaPhone.classList.add('hidden_section_acquista');
+
+            sptAcquistaSectionPhone.removeAttribute('id');
+            sptAcquistaSectionPhone.classList.add('hidden_section_acquista_spt');
+
+            etaAcquistaSectionPhone.removeAttribute('id');
+            etaAcquistaSectionPhone.classList.add('hidden_section_acquista_eta');
+
+            prezziAcquistaSectionPhone.removeAttribute('id');
+            prezziAcquistaSectionPhone.classList.add('hidden_section_acquista_prezzi');
+
+            mlAcquistaSectionPhone.removeAttribute('id');
+            mlAcquistaSectionPhone.classList.add('hidden_section_acquista_ml');
+
+            intAcquistaSectionPhone.removeAttribute('id');
+            intAcquistaSectionPhone.classList.add('hidden_section_acquista_int');
+
+            pabAcquistaSectionPhone.removeAttribute('id');
+            pabAcquistaSectionPhone.classList.add('hidden_section_acquista_pab');
+
+            sectionScopriPhone.removeAttribute('id', 'hidden_section_scopri_active');
+            sectionScopriPhone.classList.add('hidden_section_scopri');
+
+            sectionAiutoPhone.removeAttribute('id');
+            sectionAiutoPhone.classList.add('hidden_section_aiuto');
+
+            acquistaButtonPhone.addEventListener("click", function () {
+                if (window.innerWidth <= 360) {
+                    if (!acquistaButtonPhoneActive) {
+
+                        menuBtnPhoneActive.style.pointerEvents = 'auto';
+
+                        menuSpanFrecciaPhone.style.display = 'flex';
+
+                        sectionAcquistaPhone.setAttribute('id', 'hidden_section_acquista_active');
+                        sectionAcquistaPhone.classList.remove('hidden_section_acquista');
+
+                        menuBtnPhoneActive.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!menuBtnPhoneActiveReturn) {
+
+                                    menuBtnPhoneActive.style.pointerEvents = 'none';
+                                    menuSpanFrecciaPhone.style.display = 'none';
+
+                                    hiddenListPhone.style.transform = 'translateX(0%) translateY(0px)';
+
+                                    sectionAcquistaPhone.removeAttribute('id');
+                                    sectionAcquistaPhone.classList.add('hidden_section_acquista');
+
+                                    sectionAcquistaPhone.removeAttribute('id');
+                                    sectionAcquistaPhone.classList.add('hidden_section_acquista');
+
+                                    sptAcquistaSectionPhone.removeAttribute('id');
+                                    sptAcquistaSectionPhone.classList.add('hidden_section_acquista_spt');
+
+                                    etaAcquistaSectionPhone.removeAttribute('id');
+                                    etaAcquistaSectionPhone.classList.add('hidden_section_acquista_eta');
+
+                                    prezziAcquistaSectionPhone.removeAttribute('id');
+                                    prezziAcquistaSectionPhone.classList.add('hidden_section_acquista_prezzi');
+
+                                    mlAcquistaSectionPhone.removeAttribute('id');
+                                    mlAcquistaSectionPhone.classList.add('hidden_section_acquista_ml');
+
+                                    intAcquistaSectionPhone.removeAttribute('id');
+                                    intAcquistaSectionPhone.classList.add('hidden_section_acquista_int');
+
+                                    pabAcquistaSectionPhone.removeAttribute('id');
+                                    pabAcquistaSectionPhone.classList.add('hidden_section_acquista_pab');
+                                }
+                            }
+                        })
+
+                        sptButtonPhone.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!sptButtonPhoneActive) {
+                                    sptAcquistaSectionPhone.setAttribute('id', 'hidden_section_acquista_spt_active');
+                                    sptAcquistaSectionPhone.classList.remove('hidden_section_acquista_spt');
+
+                                    sptPrevSectionBtnPhone.addEventListener("click", function () {
+                                        sptAcquistaSectionPhone.removeAttribute('id');
+                                        sptAcquistaSectionPhone.classList.add('hidden_section_acquista_spt');
+
+                                        sectionAcquistaPhone.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaPhone.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+                        etaButtonPhone.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!etaButtonPhoneActive) {
+                                    etaAcquistaSectionPhone.setAttribute('id', 'hidden_section_acquista_eta_active');
+                                    etaAcquistaSectionPhone.classList.remove('hidden_section_acquista_eta');
+
+                                    etaPrevSectionBtnPhone.addEventListener("click", function () {
+                                        etaAcquistaSectionPhone.removeAttribute('id');
+                                        etaAcquistaSectionPhone.classList.add('hidden_section_acquista_eta');
+
+                                        sectionAcquistaPhone.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaPhone.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+                        prezziButtonPhone.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!prezziButtonPhoneActive) {
+                                    prezziAcquistaSectionPhone.setAttribute('id', 'hidden_section_acquista_prezzi_active');
+                                    prezziAcquistaSectionPhone.classList.remove('hidden_section_acquista_prezzi');
+
+                                    prezziPrevSectionBtnPhone.addEventListener("click", function () {
+                                        prezziAcquistaSectionPhone.removeAttribute('id');
+                                        prezziAcquistaSectionPhone.classList.add('hidden_section_acquista_prezzi');
+
+                                        sectionAcquistaPhone.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaPhone.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+                        mlButtonPhone.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!mlButtonPhoneActive) {
+                                    mlAcquistaSectionPhone.setAttribute('id', 'hidden_section_acquista_ml_active');
+                                    mlAcquistaSectionPhone.classList.remove('hidden_section_acquista_ml');
+
+                                    mlPrevSectionBtnPhone.addEventListener("click", function () {
+                                        mlAcquistaSectionPhone.removeAttribute('id');
+                                        mlAcquistaSectionPhone.classList.add('hidden_section_acquista_ml');
+
+                                        sectionAcquistaPhone.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaPhone.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+                        intButtonPhone.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!intButtonPhoneActive) {
+                                    intAcquistaSectionPhone.setAttribute('id', 'hidden_section_acquista_int_active');
+                                    intAcquistaSectionPhone.classList.remove('hidden_section_acquista_int');
+
+                                    intPrevSectionBtnPhone.addEventListener("click", function () {
+                                        intAcquistaSectionPhone.removeAttribute('id');
+                                        intAcquistaSectionPhone.classList.add('hidden_section_acquista_int');
+
+                                        sectionAcquistaPhone.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaPhone.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+                        pabButtonPhone.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!intButtonPhoneActive) {
+                                    pabAcquistaSectionPhone.setAttribute('id', 'hidden_section_acquista_pab_active');
+                                    pabAcquistaSectionPhone.classList.remove('hidden_section_acquista_pab');
+
+                                    pabPrevSectionBtnPhone.addEventListener("click", function () {
+                                        pabAcquistaSectionPhone.removeAttribute('id');
+                                        pabAcquistaSectionPhone.classList.add('hidden_section_acquista_pab');
+
+                                        sectionAcquistaPhone.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaPhone.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+
+                    } else {
+                        menuBtnPhoneActive.style.pointerEvents = 'none';
+                        menuSpanFrecciaPhone.style.display = 'none';
+
+                        sectionAcquistaPhone.removeAttribute('id');
+                        sectionAcquistaPhone.classList.add('hidden_section_acquista');
+                    }
+                    acquistaButtonPhoneActive = !acquistaButtonPhoneActive;
+                }
+            });
+
+            scopriButtonPhone.addEventListener("click", function () {
+                if (window.innerWidth <= 360) {
+                    if (!scopriButtonPhoneActive) {
+
+                        menuBtnPhoneActive.style.pointerEvents = 'auto';
+
+                        menuSpanFrecciaPhone.style.display = 'flex';
+
+                        sectionScopriPhone.setAttribute('id', 'hidden_section_scopri_active');
+                        sectionScopriPhone.classList.remove('hidden_section_scopri');
+
+                        menuBtnPhoneActive.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!menuBtnPhoneActiveReturn) {
+
+                                    menuBtnPhoneActive.style.pointerEvents = 'none';
+                                    menuSpanFrecciaPhone.style.display = 'none';
+
+                                    hiddenListPhone.style.transform = 'translateX(0%) translateY(0px)';
+
+                                    sectionScopriPhone.removeAttribute('id', 'hidden_section_scopri_active');
+                                    sectionScopriPhone.classList.add('hidden_section_scopri');
+
+                                    nvScopriSectionPhone.removeAttribute('id');
+                                    nvScopriSectionPhone.classList.add('hidden_section_scopri_nv');
+
+                                    naScopriSectionPhone.removeAttribute('id');
+                                    naScopriSectionPhone.classList.add('hidden_section_scopri_na');
+
+                                    nrScopriSectionPhone.removeAttribute('id');
+                                    nrScopriSectionPhone.classList.add('hidden_section_scopri_nr');
+                                }
+                            }
+                        })
+
+                        nvButtonPhone.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!nvButtonPhoneActive) {
+                                    nvScopriSectionPhone.setAttribute('id', 'hidden_section_scopri_nv_active');
+                                    nvScopriSectionPhone.classList.remove('hidden_section_scopri_nv');
+
+                                    nvPrevSectionBtnPhone.addEventListener("click", function () {
+                                        nvScopriSectionPhone.removeAttribute('id');
+                                        nvScopriSectionPhone.classList.add('hidden_section_scopri_nv');
+
+                                        sectionScopriPhone.setAttribute('id', 'hidden_section_scopri_active');
+                                        sectionScopriPhone.classList.remove('hidden_section_scopri');
+                                    })
+                                }
+                            }
+                        });
+                        naButtonPhone.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!naButtonPhoneActive) {
+                                    naScopriSectionPhone.setAttribute('id', 'hidden_section_scopri_na_active');
+                                    naScopriSectionPhone.classList.remove('hidden_section_scopri_na');
+
+                                    naPrevSectionBtnPhone.addEventListener("click", function () {
+                                        naScopriSectionPhone.removeAttribute('id');
+                                        naScopriSectionPhone.classList.add('hidden_section_scopri_na');
+
+                                        sectionScopriPhone.setAttribute('id', 'hidden_section_scopri_active');
+                                        sectionScopriPhone.classList.remove('hidden_section_scopri');
+                                    })
+                                }
+                            }
+                        });
+                        nrButtonPhone.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!nrButtonPhoneActive) {
+                                    nrScopriSectionPhone.setAttribute('id', 'hidden_section_scopri_nr_active');
+                                    nrScopriSectionPhone.classList.remove('hidden_section_scopri_nr');
+
+                                    nrPrevSectionBtnPhone.addEventListener("click", function () {
+                                        nrScopriSectionPhone.removeAttribute('id');
+                                        nrScopriSectionPhone.classList.add('hidden_section_scopri_nr');
+
+                                        sectionScopriPhone.setAttribute('id', 'hidden_section_scopri_active');
+                                        sectionScopriPhone.classList.remove('hidden_section_scopri');
+                                    })
+                                }
+                            }
+                        });
+
+                    } else {
+                        menuBtnPhoneActive.style.pointerEvents = 'none';
+                        menuSpanFrecciaPhone.style.display = 'none';
+
+                        sectionScopriPhone.removeAttribute('id');
+                        sectionScopriPhone.classList.add('hidden_section_scopri');
+                    }
+                    scopriButtonPhoneActive = !scopriButtonPhoneActive;
+                }
+            });
+
+            aiutoButtonPhone.addEventListener("click", function () {
+                if (window.innerWidth <= 360) {
+                    if (!aiutoButtonPhoneActive) {
+
+                        menuBtnPhoneActive.style.pointerEvents = 'auto';
+
+                        menuSpanFrecciaPhone.style.display = 'flex';
+
+                        sectionAiutoPhone.setAttribute('id', 'hidden_section_aiuto_active');
+                        sectionAiutoPhone.classList.remove('hidden_section_aiuto');
+
+                        menuBtnPhoneActive.addEventListener("click", function () {
+                            if (window.innerWidth <= 360) {
+                                if (!menuBtnPhoneActiveReturn) {
+
+                                    menuBtnPhoneActive.style.pointerEvents = 'none';
+                                    menuSpanFrecciaPhone.style.display = 'none';
+
+                                    hiddenListPhone.style.transform = 'translateX(0%) translateY(0px)';
+
+                                    sectionAiutoPhone.removeAttribute('id');
+                                    sectionAiutoPhone.classList.add('hidden_section_aiuto');
+                                }
+                            }
+                        })
+
+                    } else {
+                        menuBtnPhoneActive.style.pointerEvents = 'none';
+                        menuSpanFrecciaPhone.style.display = 'none';
+
+                        sectionAiutoPhone.removeAttribute('id');
+                        sectionAiutoPhone.classList.add('hidden_section_aiuto');
+                    }
+                    aiutoButtonPhoneActive = !aiutoButtonPhoneActive;
+                }
+            })
+
+        } else {
+
+            bodyElement.style.overflow = '';
+
+            backgroundShadowPhone.style.display = 'none';
+            backgroundShadowPhone.style.opacity = '0';
+            hiddenListPhone.style.transform = 'translateX(-100%) translateY(0px)';
+            hiddenListPhone.style.visibility = 'hidden';
+
+            closerBtnPhone.removeAttribute('id');
+            closerBtnPhone.classList.add('hidden_closer_btn_tab');
+
+            menuBtnPhone.removeAttribute('id');
+            menuBtnPhone.classList.add('menu_btn');
+
+            closeBtnPhone.removeAttribute('id');
+            closeBtnPhone.classList.add('close_btn');
+
+            closeBtnDivWrapperPhone.removeAttribute('id');
+            closeBtnDivWrapperPhone.classList.add('close_btn_div_wrapper');
+
+            changeCloseBtnPhone.classList.remove('active');
+
+            menuSpanFrecciaPhone.style.display = 'none';
+        }
+    }
+    closeBtnPhoneActive = !closeBtnPhoneActive;
+});
+
+
+
+// script scritte in alto per tablet
+let btnTopLeftTab = document.querySelector(".top_nav_left_btn");
+let btnTopRightTab = document.querySelector(".top_nav_right_btn");
+let firstTextTab = document.querySelector(".top_nav_center_el_first_text");
+let secondTextTab = document.querySelector(".top_nav_center_el_second_text");
+let thirdTextTab = document.querySelector(".top_nav_center_el_third_text");
+
+let translateValuesTab = ['0%', '-100%', '-200%'];
+let currentIndexTab = 0;
+
+btnTopLeftTab.addEventListener("click", function () {
+    if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+        currentIndexTab--;
+        if (currentIndexTab < 0) {
+            currentIndexTab = translateValuesTab.length - 1;
+        }
+
+        updateTransformTab();
+    }
+});
+
+btnTopRightTab.addEventListener("click", function () {
+    if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+        currentIndexTab++;
+        if (currentIndexTab >= translateValuesTab.length) {
+            currentIndexTab = 0;
+        }
+
+        updateTransformTab();
+    }
+});
+
+function updateTransformTab() {
+    firstTextTab.style.transform = `translateX(${translateValuesTab[currentIndexTab]})`;
+    secondTextTab.style.transform = `translateX(${translateValuesTab[currentIndexTab]})`;
+    thirdTextTab.style.transform = `translateX(${translateValuesTab[currentIndexTab]})`;
+}
+
+
+// bottone per chiudere la sezione in alto per tablet
+
+let topNavCloserBtn = document.querySelector(".top_nav_closer_btn");
+let topNav = document.querySelector(".top_nav_wrapper");
+let hiddenCloserBtn = document.querySelector(".hidden_closer_btn_tab");
+let headerInfo = document.querySelector(".header_info");
+
+let topNavCloserBtnActive = false;
+
+topNavCloserBtn.addEventListener("click", function () {
+    if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+        if (!topNavCloserBtnActive) {
+            topNav.style.display = 'none';
+            hiddenCloserBtn.style.top = '1px';
+            headerInfo.style.top = '6.5%';
+        }
+    }
+});
+
+
+// script search bar tablet
+
+let bottomNavSearchBtn = document.querySelector(".bottom_nav_search_btn");
+let hiddenSearchBar = document.querySelector(".hidden_search_bar_wrapper");
+let hiddenSearchBtn = document.querySelector(".hidden_search_bar_search_btn");
+let SearchBarCloserBtn = document.querySelector(".hidden_search_bar_closer_btn");
+
+let bottomNavSearchBtnActive = false;
+let hiddenSearchBtnActive = false;
+let SearchBarCloserBtnActive = false;
+
+bottomNavSearchBtn.addEventListener("click", function () {
+    if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+        if (!bottomNavSearchBtnActive) {
+            bodyElement.style.overflow = 'hidden';
+            hiddenSearchBar.style.display = 'block';
+        }
+    }
+    bottomNavSearchBtnActive = !bottomNavSearchBtnActive;
+});
+
+hiddenSearchBtn.addEventListener("click", function () {
+    if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+        if (!hiddenSearchBtnActive) {
+            hiddenSearchBar.style.display = 'none';
+        }
+    }
+    hiddenSearchBtnActive = !hiddenSearchBtnActive;
+});
+
+SearchBarCloserBtn.addEventListener("click", function () {
+    if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+        if (!SearchBarCloserBtnActive) {
+            hiddenSearchBar.style.display = 'none';
+        }
+    }
+    SearchBarCloserBtnActive = !SearchBarCloserBtnActive;
+});
+
+
+// script per sezione nascosta a sinistra per tablet
+
+let closerBtnTab = document.querySelector(".hidden_closer_btn_tab");
+let menuBtn = document.querySelector(".menu_btn");
+let closeBtn = document.querySelector(".close_btn");
+let changeCloseBtn = document.querySelector(".change_close_btn");
+let closeBtnDivWrapper = document.querySelector(".close_btn_div_wrapper");
+
+let backgroundShadowTab = document.querySelector(".background_shadow_tab");
+let hiddenListTab = document.querySelector(".hidden_list_tab");
+
+let closeBtnActive = false;
+
+let acquistaButtonTab = document.querySelector(".acquista_btn_tab");
+let sectionAcquistaTab = document.querySelector(".hidden_section_acquista");
+let menuSpanFreccia = document.querySelector(".menu_span_freccia");
+
+let acquistaButtonTabActive = false;
+let menuBtnActiveReturn = false;
+
+let sptAcquistaSection = document.querySelector(".hidden_section_acquista_spt");
+let sptButtonTab = document.querySelector(".main_list_hidden_section_acquista_btn");
+let sptPrevSectionBtn = document.querySelector(".hidden_section_acquista_prev_section_btn");
+
+let sptButtonTabActive = false;
+let sptPrevSectionBtnActive = false;
+
+let etaAcquistaSection = document.querySelector(".hidden_section_acquista_eta");
+let etaButtonTab = document.querySelector(".main_list_hidden_section_eta_btn");
+let etaPrevSectionBtn = document.querySelector(".hidden_section_acquista_prev_section_eta");
+
+let etaButtonTabActive = false;
+let etaPrevSectionBtnActive = false;
+
+let prezziAcquistaSection = document.querySelector(".hidden_section_acquista_prezzi");
+let prezziButtonTab = document.querySelector(".main_list_hidden_section_prezzi_btn");
+let prezziPrevSectionBtn = document.querySelector(".hidden_section_acquista_prev_section_prezzi");
+
+let prezziButtonTabActive = false;
+let prezziPrevSectionBtnActive = false;
+
+let mlAcquistaSection = document.querySelector(".hidden_section_acquista_ml");
+let mlButtonTab = document.querySelector(".main_list_hidden_section_ml_btn");
+let mlPrevSectionBtn = document.querySelector(".hidden_section_acquista_prev_section_ml");
+
+let mlButtonTabActive = false;
+let mlPrevSectionBtnActive = false;
+
+let intAcquistaSection = document.querySelector(".hidden_section_acquista_int");
+let intButtonTab = document.querySelector(".main_list_hidden_section_int_btn");
+let intPrevSectionBtn = document.querySelector(".hidden_section_acquista_prev_section_int");
+
+let intButtonTabActive = false;
+let intPrevSectionBtnActive = false;
+
+let pabAcquistaSection = document.querySelector(".hidden_section_acquista_pab");
+let pabButtonTab = document.querySelector(".main_list_hidden_section_pab_btn");
+let pabPrevSectionBtn = document.querySelector(".hidden_section_acquista_prev_section_pab");
+
+let pabButtonTabActive = false;
+let pabPrevSectionBtnActive = false;
+
+let scopriButtonTab = document.querySelector(".scopri_btn_tab");
+let sectionScopriTab = document.querySelector(".hidden_section_scopri");
+
+let scopriButtonTabActive = false;
+
+let nvScopriSection = document.querySelector(".hidden_section_scopri_nv");
+let nvButtonTab = document.querySelector(".main_list_hidden_section_scopri_btn_nv");
+let nvPrevSectionBtn = document.querySelector(".hidden_section_scopri_prev_section_nv");
+
+let nvButtonTabActive = false;
+let nvPrevSectionBtnActive = false;
+
+let naScopriSection = document.querySelector(".hidden_section_scopri_na");
+let naButtonTab = document.querySelector(".main_list_hidden_section_scopri_btn_na");
+let naPrevSectionBtn = document.querySelector(".hidden_section_scopri_prev_section_na");
+
+let naButtonTabActive = false;
+let naPrevSectionBtnActive = false;
+
+let nrScopriSection = document.querySelector(".hidden_section_scopri_nr");
+let nrButtonTab = document.querySelector(".main_list_hidden_section_scopri_btn_nr");
+let nrPrevSectionBtn = document.querySelector(".hidden_section_scopri_prev_section_nr");
+
+let nrButtonTabActive = false;
+let nrPrevSectionBtnActive = false;
+
+let aiutoButtonTab = document.querySelector(".aiuto_btn_tab");
+let sectionAiutoTab = document.querySelector(".hidden_section_aiuto");
+
+let aiutoButtonTabActive = false;
+
+
+closeBtn.addEventListener("click", function () {
+    if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+        if (!closeBtnActive) {
+
+            bodyElement.style.overflow = 'hidden';
+
+            backgroundShadowTab.style.display = 'block';
+            backgroundShadowTab.style.opacity = '0.5';
+            hiddenListTab.style.transform = 'translateX(0%) translateY(0px)';
+            hiddenListTab.style.visibility = 'visible';
+
+            closerBtnTab.setAttribute('id', 'hidden_closer_btn_tab_active')
+            closerBtnTab.classList.remove('hidden_closer_btn_tab');
+
+            menuBtn.setAttribute('id', 'menu_btn_active');
+            let menuBtnActive = document.getElementById("menu_btn_active");
+            menuBtn.classList.remove('menu_btn');
+
+            closeBtn.setAttribute('id', 'close_btn_active');
+            closeBtn.classList.remove('close_btn');
+
+            closeBtnDivWrapper.setAttribute('id', 'close_btn_div_wrapper_active');
+            closeBtnDivWrapper.classList.remove('close_btn_div_wrapper');
+
+            changeCloseBtn.classList.toggle('active');
+
+            sectionAcquistaTab.removeAttribute('id');
+            sectionAcquistaTab.classList.add('hidden_section_acquista');
+
+            sectionAcquistaTab.removeAttribute('id');
+            sectionAcquistaTab.classList.add('hidden_section_acquista');
+
+            sptAcquistaSection.removeAttribute('id');
+            sptAcquistaSection.classList.add('hidden_section_acquista_spt');
+
+            etaAcquistaSection.removeAttribute('id');
+            etaAcquistaSection.classList.add('hidden_section_acquista_eta');
+
+            prezziAcquistaSection.removeAttribute('id');
+            prezziAcquistaSection.classList.add('hidden_section_acquista_prezzi');
+
+            mlAcquistaSection.removeAttribute('id');
+            mlAcquistaSection.classList.add('hidden_section_acquista_ml');
+
+            intAcquistaSection.removeAttribute('id');
+            intAcquistaSection.classList.add('hidden_section_acquista_int');
+
+            pabAcquistaSection.removeAttribute('id');
+            pabAcquistaSection.classList.add('hidden_section_acquista_pab');
+
+            sectionScopriTab.removeAttribute('id', 'hidden_section_scopri_active');
+            sectionScopriTab.classList.add('hidden_section_scopri');
+
+            sectionAiutoTab.removeAttribute('id');
+            sectionAiutoTab.classList.add('hidden_section_aiuto');
+
+            acquistaButtonTab.addEventListener("click", function () {
+                if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                    if (!acquistaButtonTabActive) {
+
+                        menuBtnActive.style.pointerEvents = 'auto';
+
+                        menuSpanFreccia.style.display = 'flex';
+
+                        sectionAcquistaTab.setAttribute('id', 'hidden_section_acquista_active');
+                        sectionAcquistaTab.classList.remove('hidden_section_acquista');
+
+                        menuBtnActive.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!menuBtnActiveReturn) {
+
+                                    menuBtnActive.style.pointerEvents = 'none';
+                                    menuSpanFreccia.style.display = 'none';
+
+                                    hiddenListTab.style.transform = 'translateX(0%) translateY(0px)';
+
+                                    sectionAcquistaTab.removeAttribute('id');
+                                    sectionAcquistaTab.classList.add('hidden_section_acquista');
+
+                                    sectionAcquistaTab.removeAttribute('id');
+                                    sectionAcquistaTab.classList.add('hidden_section_acquista');
+
+                                    sptAcquistaSection.removeAttribute('id');
+                                    sptAcquistaSection.classList.add('hidden_section_acquista_spt');
+
+                                    etaAcquistaSection.removeAttribute('id');
+                                    etaAcquistaSection.classList.add('hidden_section_acquista_eta');
+
+                                    prezziAcquistaSection.removeAttribute('id');
+                                    prezziAcquistaSection.classList.add('hidden_section_acquista_prezzi');
+
+                                    mlAcquistaSection.removeAttribute('id');
+                                    mlAcquistaSection.classList.add('hidden_section_acquista_ml');
+
+                                    intAcquistaSection.removeAttribute('id');
+                                    intAcquistaSection.classList.add('hidden_section_acquista_int');
+
+                                    pabAcquistaSection.removeAttribute('id');
+                                    pabAcquistaSection.classList.add('hidden_section_acquista_pab');
+                                }
+                            }
+                        })
+
+                        sptButtonTab.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!sptButtonTabActive) {
+                                    sptAcquistaSection.setAttribute('id', 'hidden_section_acquista_spt_active');
+                                    sptAcquistaSection.classList.remove('hidden_section_acquista_spt');
+
+                                    sptPrevSectionBtn.addEventListener("click", function () {
+                                        sptAcquistaSection.removeAttribute('id');
+                                        sptAcquistaSection.classList.add('hidden_section_acquista_spt');
+
+                                        sectionAcquistaTab.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaTab.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+                        etaButtonTab.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!etaButtonTabActive) {
+                                    etaAcquistaSection.setAttribute('id', 'hidden_section_acquista_eta_active');
+                                    etaAcquistaSection.classList.remove('hidden_section_acquista_eta');
+
+                                    etaPrevSectionBtn.addEventListener("click", function () {
+                                        etaAcquistaSection.removeAttribute('id');
+                                        etaAcquistaSection.classList.add('hidden_section_acquista_eta');
+
+                                        sectionAcquistaTab.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaTab.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+                        prezziButtonTab.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!prezziButtonTabActive) {
+                                    prezziAcquistaSection.setAttribute('id', 'hidden_section_acquista_prezzi_active');
+                                    prezziAcquistaSection.classList.remove('hidden_section_acquista_prezzi');
+
+                                    prezziPrevSectionBtn.addEventListener("click", function () {
+                                        prezziAcquistaSection.removeAttribute('id');
+                                        prezziAcquistaSection.classList.add('hidden_section_acquista_prezzi');
+
+                                        sectionAcquistaTab.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaTab.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+                        mlButtonTab.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!mlButtonTabActive) {
+                                    mlAcquistaSection.setAttribute('id', 'hidden_section_acquista_ml_active');
+                                    mlAcquistaSection.classList.remove('hidden_section_acquista_ml');
+
+                                    mlPrevSectionBtn.addEventListener("click", function () {
+                                        mlAcquistaSection.removeAttribute('id');
+                                        mlAcquistaSection.classList.add('hidden_section_acquista_ml');
+
+                                        sectionAcquistaTab.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaTab.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+                        intButtonTab.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!intButtonTabActive) {
+                                    intAcquistaSection.setAttribute('id', 'hidden_section_acquista_int_active');
+                                    intAcquistaSection.classList.remove('hidden_section_acquista_int');
+
+                                    intPrevSectionBtn.addEventListener("click", function () {
+                                        intAcquistaSection.removeAttribute('id');
+                                        intAcquistaSection.classList.add('hidden_section_acquista_int');
+
+                                        sectionAcquistaTab.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaTab.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+                        pabButtonTab.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!intButtonTabActive) {
+                                    pabAcquistaSection.setAttribute('id', 'hidden_section_acquista_pab_active');
+                                    pabAcquistaSection.classList.remove('hidden_section_acquista_pab');
+
+                                    pabPrevSectionBtn.addEventListener("click", function () {
+                                        pabAcquistaSection.removeAttribute('id');
+                                        pabAcquistaSection.classList.add('hidden_section_acquista_pab');
+
+                                        sectionAcquistaTab.setAttribute('id', 'hidden_section_acquista_active');
+                                        sectionAcquistaTab.classList.remove('hidden_section_acquista');
+                                    })
+                                }
+                            }
+                        });
+
+                    } else {
+                        menuBtnActive.style.pointerEvents = 'none';
+                        menuSpanFreccia.style.display = 'none';
+
+                        sectionAcquistaTab.removeAttribute('id');
+                        sectionAcquistaTab.classList.add('hidden_section_acquista');
+                    }
+                    acquistaButtonTabActive = !acquistaButtonTabActive;
+                }
+            });
+
+            scopriButtonTab.addEventListener("click", function () {
+                if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                    if (!scopriButtonTabActive) {
+
+                        menuBtnActive.style.pointerEvents = 'auto';
+
+                        menuSpanFreccia.style.display = 'flex';
+
+                        sectionScopriTab.setAttribute('id', 'hidden_section_scopri_active');
+                        sectionScopriTab.classList.remove('hidden_section_scopri');
+
+                        menuBtnActive.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!menuBtnActiveReturn) {
+
+                                    menuBtnActive.style.pointerEvents = 'none';
+                                    menuSpanFreccia.style.display = 'none';
+
+                                    hiddenListTab.style.transform = 'translateX(0%) translateY(0px)';
+
+                                    sectionScopriTab.removeAttribute('id', 'hidden_section_scopri_active');
+                                    sectionScopriTab.classList.add('hidden_section_scopri');
+
+                                    nvScopriSection.removeAttribute('id');
+                                    nvScopriSection.classList.add('hidden_section_scopri_nv');
+
+                                    naScopriSection.removeAttribute('id');
+                                    naScopriSection.classList.add('hidden_section_scopri_na');
+
+                                    nrScopriSection.removeAttribute('id');
+                                    nrScopriSection.classList.add('hidden_section_scopri_nr');
+                                }
+                            }
+                        })
+
+                        nvButtonTab.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!nvButtonTabActive) {
+                                    nvScopriSection.setAttribute('id', 'hidden_section_scopri_nv_active');
+                                    nvScopriSection.classList.remove('hidden_section_scopri_nv');
+
+                                    nvPrevSectionBtn.addEventListener("click", function () {
+                                        nvScopriSection.removeAttribute('id');
+                                        nvScopriSection.classList.add('hidden_section_scopri_nv');
+
+                                        sectionScopriTab.setAttribute('id', 'hidden_section_scopri_active');
+                                        sectionScopriTab.classList.remove('hidden_section_scopri');
+                                    })
+                                }
+                            }
+                        });
+                        naButtonTab.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!naButtonTabActive) {
+                                    naScopriSection.setAttribute('id', 'hidden_section_scopri_na_active');
+                                    naScopriSection.classList.remove('hidden_section_scopri_na');
+
+                                    naPrevSectionBtn.addEventListener("click", function () {
+                                        naScopriSection.removeAttribute('id');
+                                        naScopriSection.classList.add('hidden_section_scopri_na');
+
+                                        sectionScopriTab.setAttribute('id', 'hidden_section_scopri_active');
+                                        sectionScopriTab.classList.remove('hidden_section_scopri');
+                                    })
+                                }
+                            }
+                        });
+                        nrButtonTab.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!nrButtonTabActive) {
+                                    nrScopriSection.setAttribute('id', 'hidden_section_scopri_nr_active');
+                                    nrScopriSection.classList.remove('hidden_section_scopri_nr');
+
+                                    nrPrevSectionBtn.addEventListener("click", function () {
+                                        nrScopriSection.removeAttribute('id');
+                                        nrScopriSection.classList.add('hidden_section_scopri_nr');
+
+                                        sectionScopriTab.setAttribute('id', 'hidden_section_scopri_active');
+                                        sectionScopriTab.classList.remove('hidden_section_scopri');
+                                    })
+                                }
+                            }
+                        });
+
+                    } else {
+                        menuBtnActive.style.pointerEvents = 'none';
+                        menuSpanFreccia.style.display = 'none';
+
+                        sectionScopriTab.removeAttribute('id');
+                        sectionScopriTab.classList.add('hidden_section_scopri');
+                    }
+                    scopriButtonTabActive = !scopriButtonTabActive;
+                }
+            });
+
+            aiutoButtonTab.addEventListener("click", function () {
+                if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                    if (!aiutoButtonTabActive) {
+
+                        menuBtnActive.style.pointerEvents = 'auto';
+
+                        menuSpanFreccia.style.display = 'flex';
+
+                        sectionAiutoTab.setAttribute('id', 'hidden_section_aiuto_active');
+                        sectionAiutoTab.classList.remove('hidden_section_aiuto');
+
+                        menuBtnActive.addEventListener("click", function () {
+                            if (window.innerWidth >= 361 && window.innerWidth <= 820) {
+                                if (!menuBtnActiveReturn) {
+
+                                    menuBtnActive.style.pointerEvents = 'none';
+                                    menuSpanFreccia.style.display = 'none';
+
+                                    hiddenListTab.style.transform = 'translateX(0%) translateY(0px)';
+
+                                    sectionAiutoTab.removeAttribute('id');
+                                    sectionAiutoTab.classList.add('hidden_section_aiuto');
+                                }
+                            }
+                        })
+
+                    } else {
+                        menuBtnActive.style.pointerEvents = 'none';
+                        menuSpanFreccia.style.display = 'none';
+
+                        sectionAiutoTab.removeAttribute('id');
+                        sectionAiutoTab.classList.add('hidden_section_aiuto');
+                    }
+                    aiutoButtonTabActive = !aiutoButtonTabActive;
+                }
+            })
+
+        } else {
+
+            bodyElement.style.overflow = '';
+
+            backgroundShadowTab.style.display = 'none';
+            backgroundShadowTab.style.opacity = '0';
+            hiddenListTab.style.transform = 'translateX(-100%) translateY(0px)';
+            hiddenListTab.style.visibility = 'hidden';
+
+            closerBtnTab.removeAttribute('id');
+            closerBtnTab.classList.add('hidden_closer_btn_tab');
+
+            menuBtn.removeAttribute('id');
+            menuBtn.classList.add('menu_btn');
+
+            closeBtn.removeAttribute('id');
+            closeBtn.classList.add('close_btn');
+
+            closeBtnDivWrapper.removeAttribute('id');
+            closeBtnDivWrapper.classList.add('close_btn_div_wrapper');
+
+            changeCloseBtn.classList.remove('active');
+
+            menuSpanFreccia.style.display = 'none';
+        }
+    }
+    closeBtnActive = !closeBtnActive;
+});
+
+
+// script scritte in alto desk
 let btnTopLeft = document.querySelector(".control_btn_left");
 let btnTopRight = document.querySelector(".control_btn_right");
 let firstText = document.querySelector(".first_text");
 let secondText = document.querySelector(".second_text");
+let thirdText = document.querySelector(".third_text");
 
-let btnTopLeftActive = false;
-let btnTopRightActive = false;
+let translateValues = ['0%', '-100%', '-200%'];
+let currentIndex = 0;
 
 btnTopLeft.addEventListener("click", function () {
-    if (!btnTopLeftActive) {
-        firstText.style.transform = 'translateX(-100%)';
-        secondText.style.transform = 'translateX(-100%)';
-    } else {
-        firstText.style.transform = 'translateX(0%)';
-        secondText.style.transform = 'translateX(0%)';
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = translateValues.length - 1;
     }
-    btnTopLeftActive = !btnTopLeftActive;
+
+    updateTransform();
 });
 
 btnTopRight.addEventListener("click", function () {
-    if (!btnTopRightActive) {
-        firstText.style.transform = 'translateX(-100%)';
-        secondText.style.transform = 'translateX(-100%)';
-    } else {
-        firstText.style.transform = 'translateX(0%)';
-        secondText.style.transform = 'translateX(0%)';
+    currentIndex++;
+    if (currentIndex >= translateValues.length) {
+        currentIndex = 0;
     }
-    btnTopRightActive = !btnTopRightActive;
+
+    updateTransform();
 });
 
-//script sezione menù sinistra
+function updateTransform() {
+    firstText.style.transform = `translateX(${translateValues[currentIndex]})`;
+    secondText.style.transform = `translateX(${translateValues[currentIndex]})`;
+    thirdText.style.transform = `translateX(${translateValues[currentIndex]})`;
+}
+
+//script sezione menù sinistra per desk
 let mainElement = document.querySelector("main");
 let acquistaButton = document.querySelector(".acquista_btn");
 let hiddenList = document.querySelector(".hidden_list");
@@ -88,13 +1224,15 @@ let hiddenSection3 = document.querySelector(".hidden_section_3");
 
 let aiutoButtonActive = false;
 
+let shadowBack = document.querySelector(".shadow_background_desk");
+
 
 
 acquistaButton.addEventListener("click", function () {
     if (window.innerWidth >= 821) {
         if (!acquistaButtonActive) {
 
-
+            shadowBack.style.display = 'block';
 
             acquistaButton.style.borderBottom = '3px solid rgb(0, 0, 0)';
             scopriButton.style.borderBottom = 'none';
@@ -139,6 +1277,7 @@ acquistaButton.addEventListener("click", function () {
                     hiddenList.classList.remove('active');
                     bodyElement.style.overflow = '';
                     hiddenListActive.style.width = '';
+                    shadowBack.style.display = 'none';
                 }
                 else {
                     hiddenListActive.classList.add('active');
@@ -329,6 +1468,8 @@ acquistaButton.addEventListener("click", function () {
 
         } else {
 
+            shadowBack.style.display = 'none';
+
             hiddenList.classList.add('hidden_list');
             hiddenList.removeAttribute('id');
 
@@ -342,6 +1483,8 @@ acquistaButton.addEventListener("click", function () {
 scopriButton.addEventListener("click", function () {
     if (window.innerWidth >= 821) {
         if (!scopriButtonActive) {
+
+            shadowBack.style.display = 'block';
 
             acquistaButton.style.borderBottom = 'none';
 
@@ -382,6 +1525,7 @@ scopriButton.addEventListener("click", function () {
                     hiddenList.classList.remove('active');
                     bodyElement.style.overflow = '';
                     hiddenListActive.style.width = '';
+                    shadowBack.style.display = 'none';
                 } else {
                     hiddenListActive.classList.add('active');
                     hiddenList.classList.remove('hidden_list');
@@ -456,6 +1600,8 @@ scopriButton.addEventListener("click", function () {
 
         } else {
 
+            shadowBack.style.display = 'none';
+
             hiddenList.classList.add('hidden_list');
             hiddenList.removeAttribute('id');
 
@@ -469,6 +1615,8 @@ scopriButton.addEventListener("click", function () {
 aiutoButton.addEventListener("click", function () {
     if (window.innerWidth >= 821) {
         if (!aiutoButtonActive) {
+
+            shadowBack.style.display = 'block';
 
             acquistaButton.style.borderBottom = 'none';
             scopriButton.style.borderBottom = 'none';
@@ -498,6 +1646,7 @@ aiutoButton.addEventListener("click", function () {
                     hiddenList.classList.remove('active');
                     bodyElement.style.overflow = '';
                     hiddenListActive.style.display = 'hidden';
+                    shadowBack.style.display = 'none';
                 } else {
                     hiddenListActive.classList.add('active');
                     hiddenList.classList.remove('hidden_list');
@@ -505,6 +1654,8 @@ aiutoButton.addEventListener("click", function () {
             })
 
         } else {
+
+            shadowBack.style.display = 'none';
 
             hiddenList.classList.add('hidden_list');
             hiddenList.removeAttribute('id');
@@ -518,7 +1669,7 @@ aiutoButton.addEventListener("click", function () {
     aiutoButtonActive = !aiutoButtonActive;
 })
 
-// script barra di ricerca
+// script barra di ricerca per desk
 let searchButton = document.querySelector(".search_btn");
 let hiddenSrcBtnWrapper = document.querySelector(".hidden_search_btn_wrapper");
 let closeButton = document.querySelector(".second_btn");
