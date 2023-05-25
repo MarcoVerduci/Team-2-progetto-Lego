@@ -25,3 +25,31 @@ buttonSx.addEventListener("click",function (e){
 
 })
 
+let buttonSx2 = document.querySelector("#prev2");
+let buttonDx2 = document.querySelector("#next2");
+let carosello2=document.querySelector("#caros2");
+let scroll2= 0;
+
+buttonDx2.addEventListener("click",function (e){
+    e.preventDefault();
+
+    
+    carosello2.scroll({
+        left : `${scroll2 += 1400}` ,
+        behavior: "smooth",
+      });
+    
+})
+
+buttonSx2.addEventListener("click",function (e){
+    e.preventDefault();
+
+    carosello2.scroll({
+        left:  `${scroll2 -= 1400}`,
+        behavior: "smooth",
+      });
+    
+
+})
+
+
