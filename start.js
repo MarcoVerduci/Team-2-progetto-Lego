@@ -78,7 +78,8 @@ bottomNavSearchBtnPhone.addEventListener("click", function () {
     bottomNavSearchBtnPhoneActive = !bottomNavSearchBtnPhoneActive;
 });
 
-hiddenSearchBtnPhone.addEventListener("click", function () {
+hiddenSearchBtnPhone.addEventListener("click", function (event) {
+    event.preventDefault();
     if (window.innerWidth <= 360) {
         if (!hiddenSearchBtnPhoneActive) {
             hiddenSearchBarPhone.style.display = 'none';
@@ -87,7 +88,8 @@ hiddenSearchBtnPhone.addEventListener("click", function () {
     hiddenSearchBtnPhoneActive = !hiddenSearchBtnPhoneActive;
 });
 
-SearchBarCloserBtnPhone.addEventListener("click", function () {
+SearchBarCloserBtnPhone.addEventListener("click", function (event) {
+    event.preventDefault();
     if (window.innerWidth <= 360) {
         if (!SearchBarCloserBtnPhoneActive) {
             hiddenSearchBarPhone.style.display = 'none';
@@ -645,7 +647,8 @@ bottomNavSearchBtn.addEventListener("click", function () {
     bottomNavSearchBtnActive = !bottomNavSearchBtnActive;
 });
 
-hiddenSearchBtn.addEventListener("click", function () {
+hiddenSearchBtn.addEventListener("click", function (event) {
+    event.preventDefault();
     if (window.innerWidth >= 361 && window.innerWidth <= 820) {
         if (!hiddenSearchBtnActive) {
             hiddenSearchBar.style.display = 'none';
@@ -654,7 +657,8 @@ hiddenSearchBtn.addEventListener("click", function () {
     hiddenSearchBtnActive = !hiddenSearchBtnActive;
 });
 
-SearchBarCloserBtn.addEventListener("click", function () {
+SearchBarCloserBtn.addEventListener("click", function (event) {
+    event.preventDefault();
     if (window.innerWidth >= 361 && window.innerWidth <= 820) {
         if (!SearchBarCloserBtnActive) {
             hiddenSearchBar.style.display = 'none';
@@ -1686,7 +1690,8 @@ searchButton.addEventListener("click", function () {
 
         searchButton.style.display = 'none';
     }
-    closeButton.addEventListener("click", function () {
+    closeButton.addEventListener("click", function (event) {
+        event.preventDefault();
         if (!closeButtonActive) {
             hiddenSrcBtnWrapper.classList.add('hidden_search_btn_wrapper');
             hiddenSrcBtnWrapper.removeAttribute('id');
@@ -1694,7 +1699,8 @@ searchButton.addEventListener("click", function () {
             searchButton.style.display = 'flex';
         }
     })
-    secondSrcBtn.addEventListener("click", function () {
+    secondSrcBtn.addEventListener("click", function (event) {
+        event.preventDefault();
         if (!secondSrcBtnActive) {
             hiddenSrcBtnWrapper.classList.add('hidden_search_btn_wrapper');
             hiddenSrcBtnWrapper.removeAttribute('id');
