@@ -3,6 +3,7 @@
     height: 35rem;
     display: flex;
     justify-content: center;
+    
 
     ::-webkit-scrollbar-track {
         background-color: #ccc;
@@ -24,6 +25,7 @@
 
 
     .carosello {
+        scroll-behavior: smooth;
         width: 73vw;
         // height: 45rem;
         display: flex;
@@ -70,6 +72,10 @@
             transform: rotate(180deg);
         }
     }
+}
+
+
+    .setEvidenza{
+        padding-top: 1rem;
     }
-    
     
