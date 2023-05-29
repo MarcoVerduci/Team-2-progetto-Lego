@@ -6284,7 +6284,6 @@
         .hidemenu4 {
             display: none;
             flex-direction: column;
-            // transition: ease-in-out 1s;
 
             a{
                 padding: 1rem 1rem;
@@ -12691,6 +12690,11 @@
             gap: 2rem;
             width: 80vw;
 
+            & > p {
+                font-weight: bold;
+                font-size: 2rem;
+            }
+
             .container_cards {
                 display: flex;
                 gap: 1rem;
@@ -13603,7 +13607,10 @@
                     width: 100%;
                 }
 
-                .hidemenu {
+                .hidemenu1,
+                .hidemenu2,
+                .hidemenu3,
+                .hidemenu4 {
                     display: flex;
                     flex-direction: column;
                     gap: 1.5rem;
