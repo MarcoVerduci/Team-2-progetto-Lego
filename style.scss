@@ -1,5 +1,6 @@
 @use "card.scss";
 @use "carosello.scss";
+@use "languageContainer.scss";
 
 * {
     margin: 0;
@@ -6203,6 +6204,11 @@
                     width: 5rem;
                     height: 2.5rem;
                     text-align: center;
+                    z-index: 2;
+                    
+                }
+                .vaicoltango{
+                    cursor: pointer;
                 }
 
             }
