@@ -73,6 +73,8 @@ bottomNavSearchBtnPhone.addEventListener("click", function () {
         if (!bottomNavSearchBtnPhoneActive) {
             bodyElement.style.overflow = 'hidden';
             hiddenSearchBarPhone.style.display = 'block';
+        } else {
+            bodyElement.style.overflow = '';
         }
     }
     bottomNavSearchBtnPhoneActive = !bottomNavSearchBtnPhoneActive;
@@ -82,6 +84,7 @@ hiddenSearchBtnPhone.addEventListener("click", function (event) {
     event.preventDefault();
     if (window.innerWidth <= 360) {
         if (!hiddenSearchBtnPhoneActive) {
+            bodyElement.style.overflow = '';
             hiddenSearchBarPhone.style.display = 'none';
         }
     }
@@ -93,6 +96,7 @@ SearchBarCloserBtnPhone.addEventListener("click", function (event) {
     if (window.innerWidth <= 360) {
         if (!SearchBarCloserBtnPhoneActive) {
             hiddenSearchBarPhone.style.display = 'none';
+            bodyElement.style.overflow = '';
         }
     }
     SearchBarCloserBtnPhoneActive = !SearchBarCloserBtnPhoneActive;
@@ -642,6 +646,8 @@ bottomNavSearchBtn.addEventListener("click", function () {
         if (!bottomNavSearchBtnActive) {
             bodyElement.style.overflow = 'hidden';
             hiddenSearchBar.style.display = 'block';
+        } else {
+            bodyElement.style.overflow = '';
         }
     }
     bottomNavSearchBtnActive = !bottomNavSearchBtnActive;
@@ -652,6 +658,7 @@ hiddenSearchBtn.addEventListener("click", function (event) {
     if (window.innerWidth >= 361 && window.innerWidth <= 820) {
         if (!hiddenSearchBtnActive) {
             hiddenSearchBar.style.display = 'none';
+            bodyElement.style.overflow = '';
         }
     }
     hiddenSearchBtnActive = !hiddenSearchBtnActive;
@@ -662,6 +669,7 @@ SearchBarCloserBtn.addEventListener("click", function (event) {
     if (window.innerWidth >= 361 && window.innerWidth <= 820) {
         if (!SearchBarCloserBtnActive) {
             hiddenSearchBar.style.display = 'none';
+            bodyElement.style.overflow = '';
         }
     }
     SearchBarCloserBtnActive = !SearchBarCloserBtnActive;
