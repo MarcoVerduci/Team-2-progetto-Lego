@@ -99,9 +99,9 @@ const langButton = document.querySelector(".vaicoltango")
 
 langButton.addEventListener("click",function (ev) {
     ev.preventDefault()
-    if (globLanguage.style.display === "none"){
+   
         globLanguage.style.display ="flex"
-    } else globLanguage.style.display="none"
+   
         
     
     
